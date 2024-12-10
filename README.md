@@ -13,31 +13,7 @@ A simple and efficient **Library Management System** built using **Java**, **JDB
 - **Java** (Core concepts, JDBC)  
 - **MySQL** (Database management)  
 - **Eclipse/IntelliJ IDEA** (Development IDE)  
-
-## 📂 Project Structure  
-Library-Management-System/
-├── src/
-│   ├── com/
-│   │   ├── library/
-│   │   │   ├── dao/                    # Data Access Object classes (Database interaction)
-│   │   │   │   ├── BookDAO.java
-│   │   │   │   ├── IssuedBookDAO.java
-│   │   │   │   └── UserDAO.java
-│   │   │   ├── model/                  # Entity/Model classes (Objects for Books, Users, etc.)
-│   │   │   │   ├── Book.java
-│   │   │   │   ├── IssuedBook.java
-│   │   │   │   └── User.java
-│   │   │   ├── service/                # Business Logic (Service layer)
-│   │   │   │   ├── BookService.java
-│   │   │   │   ├── IssuedBookService.java
-│   │   │   │   └── UserService.java
-│   │   │   ├── util/                   # Utility classes (Database connection, helpers)
-│   │   │   │   └── DBConnection.java
-│   │   │   └── main/                   # Main entry point of the application
-│   │   │       └── LibrarySystem.java
-└── README.md                           # Project information and setup
-
-
+ 
 ## 🚀 How to Run  
 1. Clone the repository.  
 2. Import the project into your favorite IDE.  
