@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.library.dao.IssuedBookDAO;
+import com.library.util.InputValidator;
 
 public class IssuedBooksService {
 	public IssuedBookDAO issuedBookDAO= new IssuedBookDAO();
@@ -12,16 +13,36 @@ public class IssuedBooksService {
 	public void issueBook() {
 		System.out.println("Enter the Book ID:");
 		int book_id=scanner.nextInt();
+		if(!InputValidator.validateBookId(book_id)) {
+			System.out.println("Invalid Book ID. Please enter a valid positive integer.");
+			return;
+		}
+		
 		System.out.println("Enter the User ID:");
 		int user_id=scanner.nextInt();
+		if(!InputValidator.validateUserId(user_id)) {
+			System.out.println("Invalid User ID. Please enter a valid positive integer.");
+			return;
+		}
+		
 		issuedBookDAO.issueBook(book_id, user_id);
 	}
 
 	public void returnBook() {
 		System.out.println("Enter the Book ID:");
 		int book_id=scanner.nextInt();
+		if(!InputValidator.validateBookId(book_id)) {
+			System.out.println("Invalid Book ID. Please enter a valid positive integer.");
+			return;
+		}
+		
 		System.out.println("Enter the User ID:");
 		int user_id=scanner.nextInt();
+		if(!InputValidator.validateUserId(user_id)) {
+			System.out.println("Invalid User ID. Please enter a valid positive integer.");
+			return;
+		}
+		
 		issuedBookDAO.returnBook(book_id, user_id);
 	}
 
